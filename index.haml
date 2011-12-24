@@ -1,0 +1,34 @@
+!!! 5
+%html(lang="en-US")
+  %head
+    %title Harvest Bookmarklet
+    %script(src="loader.js")
+    %script(src="bookmarklet.js")
+    :javascript
+      $(function() { Bookmarklet(); });
+    :css
+      html { background: #333333; }
+      body {
+        width: 400px;
+        padding: 20px;
+        margin: 0 auto;
+        font: normal 16px Helvetica, Arial, sans-serif;
+        color: #333333;
+        background: #ffffff; }
+      p { line-height: 140%; }
+      a {
+        padding: 2px;
+        text-decoration: none;
+        color: #333333;
+        background: #fffd4a; }
+      a:hover { background: #fffeaf; }
+    %meta(charset="UTF-8")
+  %body
+    %h1 Harvest Bookmarklet
+    %h2 Purpose
+    %p To enable keyboard commands that make using the Harvest web interface easier if your workflow consists of using your keyboard as much as possible.
+    %h2 Installing
+    %p
+      Drag this
+      %a(href='#') Harvest Bookmarklet
+      link to your bookmarks bar. Run it when you're on the day view page within Harvest. You'll be presented with key commands once it's loaded.
