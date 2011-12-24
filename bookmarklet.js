@@ -5,6 +5,7 @@ function Bookmarklet() {
     "<mark>X</mark>e": "Edits line number <mark>X</mark>",
     h: "Toggles this help window",
     n: "Create new entry",
+    "<mark>X</mark>s": "Stops/starts timer for line number <mark>X</mark>",
     "esc": "Cancels current action",
     "<span class='cmd'>Cmd</span>-enter": "Saves currently active entry"
   };
@@ -118,6 +119,13 @@ function Bookmarklet() {
         "78": function() {
           // new (n)
           b.actions.$new.click();
+          b.buffer = "";
+        },
+        "83": function() {
+          // stop/start (s)
+          var idx = +b.buffer - 1;
+          if (idx < 0) { idx = 0; }
+          b.actions.refresh().eq(idx).find("a.timer").click();
           b.buffer = "";
         },
         "88": function() { b.$modal.is(":visible") && b.closeModal(); },
