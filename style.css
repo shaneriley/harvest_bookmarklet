@@ -14,8 +14,7 @@
   height: 16px;
   text-indent: -8685px;
   overflow: hidden;
-  background: #0066cc;
-  -webkit-mask-box-image: url("icon_help.png"); }
+  background: transparent url("icon_help.png") 50% 50% no-repeat; }
 #harvest_bookmarklet_modal {
   display: none;
   position: absolute;
@@ -45,8 +44,7 @@
     height: 16px;
     text-indent: -8685px;
     overflow: hidden;
-    background: #0066cc;
-    -webkit-mask-box-image: url("icon_close.png"); }
+    background: transparent url("icon_close.png") 50% 50% no-repeat; }
   #harvest_bookmarklet_modal p { font-size: 14px; }
   #harvest_bookmarklet_modal dt {
     width: auto;
@@ -64,6 +62,6 @@
     display: inline-block;
     width: 16px;
     height: 16px;
-    text-indent: -8685px;
-    background: #333333;
-    -webkit-mask-box-image: url("icon_cmd.png"); }
+    line-height: 16px;
+    color: transparent;
+    background: transparent url("icon_cmd.png") 50% 50% no-repeat; }
